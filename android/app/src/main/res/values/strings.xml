@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Taskzone</string>
+    <string name="title_activity_main">Taskzone</string>
+    <string name="package_name">cn.cutemc.taskzone</string>
+    <string name="custom_url_scheme">cn.cutemc.taskzone</string>
+</resources>
