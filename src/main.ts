@@ -1,23 +1,30 @@
 // Import styles files
-import './assets/style/main.less'
+import './styles/main.less'
 
 // Import Vue and other plugins
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import VueI18n from 'vue-i18n'
+// import VueI18n from 'vue-i18n'
 
 // Import App and router
 import App from '@/App.vue'
-import router from './router'
+import router from './router/router'
 
-// Create Vue app
+// Import Capacitor plugins
+import { Capacitor } from '@capacitor/core'
+
+
+customElements.define('jeep-sqlite', JeepSqlite);
+
 const app = createApp(App)
 
 // Use plugins
 app.use(createPinia())
 app.use(router)
-app.use(VueI18n)
+// app.use(VueI18n)
 
-// Mount Vue app
-app.mount('#app')
+router.isReady().then(() => {
+  // Mount Vue app
+  app.mount('#app')
+});

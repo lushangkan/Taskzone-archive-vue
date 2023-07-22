@@ -1,14 +1,25 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<template id="app" class="flex w-screen h-screen">
+  <BottomNavigation/>
 
-<template>
-  <div class="app">
-
-  </div>
+  <router-view/>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import BottomNavigation from "@/components/BottomNavigation.vue";
+import { RouterView } from "vue-router";
+import { defineComponent } from "vue";
+import { onMounted, ref , type Ref} from "vue";
+import * as fun from "@/scripts/fun";
+import router from "@/router/router";
+
+onMounted(() => {
+  console.log('App.vue mounted');
+
+  //生成主题颜色的不同版本
+  fun.generateThemeColorVariants();
+})
+</script>
+
+<style scoped lang="less">
 
 </style>

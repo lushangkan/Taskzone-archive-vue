@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "animate.css/animate.css";
+
+// Font
+@import "./fonts/misans.less";
+
+#app {
+  font-family: "Misans", sans-serif;
+}
+
+.active {
+  border-top-width: 3px;
+}
+
+.page {
+  @apply h-screen;
+  @apply w-screen;
+  @apply touch-pan-y;
+
+  background-color: hsl(var(--p-800));
+}
+
+.active-icon > svg {
+  stroke: hsl(var(--p));
+}
+
+.btm-nav > * {
+  flex-basis: 0;
+}
+
+.today-card-bg {
+  background: linear-gradient(163deg, hsl(var(--p-200)) 0%, hsl(var(--p--200)) 100%);
+}
+
+.glassmorphism {
+  -webkit-backdrop-filter: blur(1px) saturate(110%);
+  backdrop-filter: blur(1px) saturate(110%);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.gradient-conic-secondary {
+  background:
+          conic-gradient(from 180deg at 2.5% 43%, hsl(var(--s)), hsl(var(--s-400)));
+}
+
+.progress-b1::-moz-progress-bar {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+.progress-b1:indeterminate {
+  --progress-color: hsl(var(--b1));
+}
+.progress-b1::-webkit-progress-value {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
