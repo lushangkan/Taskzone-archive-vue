@@ -1,3 +1,5 @@
+import 'reflect-metadata'
+
 // Import styles files
 import './styles/main.less'
 
@@ -5,26 +7,29 @@ import './styles/main.less'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+import { initDb } from '@/database/init-db';
+
 // import VueI18n from 'vue-i18n'
 
 // Import App and router
 import App from '@/App.vue'
 import router from './router/router'
 
-// Import Capacitor plugins
-import { Capacitor } from '@capacitor/core'
-
-
-customElements.define('jeep-sqlite', JeepSqlite);
+// Import database stores
+import { useDatabaseStores } from '@/stores/database-stores';
+const dbStores = useDatabaseStores();
 
 const app = createApp(App)
 
-// Use plugins
-app.use(createPinia())
-app.use(router)
+// Init database
+initDb(() => {
+  // Use plugins
+  app.use(createPinia())
+  app.use(router)
 // app.use(VueI18n)
 
-router.isReady().then(() => {
-  // Mount Vue app
-  app.mount('#app')
-});
+  router.isReady().then(() => {
+    // Mount Vue app
+    app.mount('#app')
+  });
+}, dbStores);

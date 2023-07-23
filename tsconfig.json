@@ -1,5 +1,7 @@
 {
-  "files": [],
+  "files": [
+    ""
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
@@ -9,8 +11,26 @@
     }
   ],
   "compilerOptions": {
-    "types": [
-      "vite/client",
+    "module": "ES5",
+    "lib": [
+      "ES5",
+      "DOM"
     ],
+    "target": "ES5",
+    "noEmit": true,
+    "strictPropertyInitialization": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "types": [
+      "vite/client"
+    ]
   },
 }

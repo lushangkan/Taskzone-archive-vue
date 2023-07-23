@@ -5,11 +5,10 @@
 </template>
 
 <script setup lang="ts">
-import BottomNavigation from "@/components/BottomNavigation.vue";
 import { RouterView } from "vue-router";
 import { defineComponent } from "vue";
 import { onMounted, ref , type Ref} from "vue";
-import * as fun from "@/scripts/fun";
+import * as fun from "@/fun";
 import router from "@/router/router";
 
 onMounted(() => {
