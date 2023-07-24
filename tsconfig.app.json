@@ -3,9 +3,14 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "src/scripts/*.ts", "src/scripts/**/*.ts",],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "composite": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    },
+    }
   }
 }

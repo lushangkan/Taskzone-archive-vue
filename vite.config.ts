@@ -18,7 +18,7 @@ export default defineConfig({
         require('autoprefixer'),
         px2vw({
           unitToConvert: 'px',
-          viewportWidth: 375,
+          viewportWidth: 390,
           unitPrecision: 5,
           propList: ['*'],
           viewportUnit: 'vw',
@@ -32,9 +32,12 @@ export default defineConfig({
           landscape: false,
           landscapeUnit: 'vw',
           landscapeWidth: 568
-        }),
+        })
       ],
     },
+  },
+  optimizeDeps: {
+    exclude: ['jeep-sqlite/loader']
   },
   resolve: {
     alias: {

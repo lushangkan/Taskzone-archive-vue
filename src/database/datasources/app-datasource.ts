@@ -9,10 +9,11 @@ import {Task} from "@/database/entities/Task";
 export default new DataSource({
     type: 'capacitor',
     driver: dBConnect,
-    database: 'appDB',
+    database: 'taskzoneDB',
     entities: [DayTask, Setting, Task, TaskGroup],
     logging: ['error', 'query', 'schema'],
     //TODO: 数据库结构完成时设为false
     synchronize: true,
     //TODO: 加密
+    mode: "encryption",
 });

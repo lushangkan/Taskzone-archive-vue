@@ -1,6 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import type {RepeatCustom} from "@/task/RepeatCustom";
-import type {RepeatMode} from "@/enum/RepeatMode";
+import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn} from "typeorm";
+import {RepeatCustom} from "@/task/RepeatCustom";
+import {RepeatMode} from "../../enum/RepeatMode";
 
 @Entity()
 export class DayTask {
@@ -8,33 +8,33 @@ export class DayTask {
     @PrimaryGeneratedColumn()
     id!: number;
 
-    @Column()
+    @Column('text')
     name: string;
 
-    @Column()
+    @Column('text')
     description: string;
 
-    @Column()
+    @Column('text')
     color: string;
 
-    @Column()
+    @Column('text')
     icon: string;
 
-    @Column()
+    @Column('simple-array')
     tags: number[];
 
-    @Column()
+    @CreateDateColumn()
     createDate!: Date;
 
-    @Column()
+    @Column('datetime')
     deadLineDate: Date;
 
-    @Column()
+    @Column('simple-array')
     doneDate: Date[];
 
-    @Column()
+    @Column('int')
     repeatMode: RepeatMode;
 
-    @Column()
+    @Column('simple-json')
     repeatCustom: RepeatCustom;
 }

@@ -7,11 +7,11 @@ export class Setting {
     @PrimaryGeneratedColumn()
     id!: number;
 
-    @Column()
-    name!: string;
+    @Column('text')
+    key: string;
 
-    @Column()
-    value!: JSON | string | number | boolean | null;
+    @Column('simple-json')
+    value: { value: any };
 
 
 }

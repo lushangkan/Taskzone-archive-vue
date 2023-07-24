@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn} from "typeorm";
 
 @Entity()
 export class TaskGroup {
@@ -6,28 +6,28 @@ export class TaskGroup {
     @PrimaryGeneratedColumn()
     id!: number;
 
-    @Column()
-    name: string | undefined;
+    @Column('text')
+    name: string;
 
-    @Column()
-    description: string | undefined;
+    @Column('text')
+    description: string;
 
-    @Column()
-    tasks: number[] | undefined;
+    @Column('simple-array')
+    tasks: number[];
 
-    @Column()
-    color: string | undefined;
+    @Column('text')
+    color: string;
 
-    @Column()
-    icon: string | undefined;
+    @Column('text')
+    icon: string;
 
-    @Column()
-    tags: number[] | undefined;
+    @Column('simple-array')
+    tags: number[];
 
-    @Column()
-    createDate!: Date;
+    @CreateDateColumn()
+    createDate: Date;
 
-    @Column()
-    deadLineDate: Date | undefined;
+    @Column('datetime')
+    deadLineDate: Date;
 
 }

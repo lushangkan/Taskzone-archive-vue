@@ -6,7 +6,9 @@ import { CapacitorSQLite } from '@capacitor-community/sqlite';
 import sqliteConnection from '@/database/db-connect';
 import AppDatasource from "@/database/datasources/app-datasource";
 
-export function initDb(afterInit: Function, dbStores: any){
+export function initDb(beforeInit: Function, afterInit: Function, dbStores: any){
+
+    beforeInit();
 
     applyPolyfills().then(() => {
         jeepSqlite(window);
@@ -39,6 +41,7 @@ export function initDb(afterInit: Function, dbStores: any){
             // see https://github.com/capacitor-community/sqlite/issues/106
             CapacitorSQLite.checkConnectionsConsistency({
                 dbNames: [], // i.e. "i expect no connections to be open"
+                openModes: [],
             }).catch((e: any) => {
                 // the plugin throws an error when closing connections. we can ignore
                 // that since it is expected behaviour

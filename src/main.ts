@@ -9,7 +9,6 @@ import { createPinia } from 'pinia'
 
 import { initDb } from '@/database/init-db';
 
-// import VueI18n from 'vue-i18n'
 
 // Import App and router
 import App from '@/App.vue'
@@ -17,17 +16,26 @@ import router from './router/router'
 
 // Import database stores
 import { useDatabaseStores } from '@/stores/database-stores';
-const dbStores = useDatabaseStores();
 
+// Import i18n
+import {i18n} from "./locals/i18n";
+
+// Create Vue app
 const app = createApp(App)
+
+// Use plugins
+const pinia = createPinia()
+app.use(pinia)
+app.use(router)
+app.use(i18n)
+
+// Use database stores
+const dbStores = useDatabaseStores();
 
 // Init database
 initDb(() => {
-  // Use plugins
-  app.use(createPinia())
-  app.use(router)
-// app.use(VueI18n)
 
+},() => {
   router.isReady().then(() => {
     // Mount Vue app
     app.mount('#app')

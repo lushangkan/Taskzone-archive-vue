@@ -146,3 +146,22 @@ export function generateThemeColorVariants(): void {
     generateColorVariants('--a')
     generateColorVariants('--n')
 }
+
+/**
+ * 添加全屏半透明遮罩
+ */
+export function addMask(): void {
+    const mask = document.createElement('div');
+    mask.classList.add('mask');
+    document.body.appendChild(mask);
+}
+
+/**
+ * 删除遮罩
+ */
+export function removeMask(): void {
+    const mask = document.querySelector('.mask');
+    if (mask) {
+        mask.remove();
+    }
+}

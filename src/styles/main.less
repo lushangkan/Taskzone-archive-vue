@@ -56,3 +56,49 @@
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
+
+.mask {
+  @apply absolute;
+  @apply bg-neutral;
+  @apply top-0;
+  @apply w-screen;
+  @apply h-screen;
+  @apply z-40;
+  opacity: 0.13;
+}
+
+.btn-menu-active {
+  background-color: hsl(var(--p-200));
+  > svg {
+    stroke: hsl(var(--b1));
+  }
+  > a {
+    color: hsl(var(--b1));
+  }
+}
+
+@keyframes mask-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.13;
+    }
+}
+
+.mask-enter-active {
+  animation: mask-animation 0.2s ease-in-out forwards;
+}
+
+.mask-leave-active {
+  animation: mask-animation 0.2s ease-in-out forwards;
+  animation-direction: reverse;
+}
+
+.menu-enter-active {
+    animation: slideInLeft 0.2s ease-in-out forwards;
+}
+
+.menu-leave-active {
+    animation: slideOutLeft 0.2s ease-in-out forwards;
+}
