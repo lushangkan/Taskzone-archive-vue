@@ -19,6 +19,7 @@
     "@capacitor/android": "^5.0.5",
     "@capacitor/core": "^5.0.5",
     "@capacitor/ios": "^5.0.5",
+    "@tailwindcss/forms": "^0.5.4",
     "animate.css": "^4.1.1",
     "animejs": "^3.2.1",
     "colorjs.io": "^0.4.5",
@@ -32,7 +33,9 @@
     "vue": "^3.3.4",
     "vue-feather-icons": "^5.1.0",
     "vue-i18n": "9",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.2",
+    "vue-tailwind-datepicker": "^1.4.5",
+    "vue3-lottie": "^2.7.4"
   },
   "devDependencies": {
     "@capacitor/cli": "^5.0.5",

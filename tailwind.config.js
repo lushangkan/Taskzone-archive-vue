@@ -1,14 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
       "./src/**/*.{ts,vue,less,jsx,tsx}",
-      "./index.html"
+      "./index.html",
+      "./node_modules/vue-tailwind-datepicker/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // DO NOT CHANGE
+        "vtd-primary": colors.sky, // Light mode Datepicker color
+        "vtd-secondary": colors.gray, // Dark mode Datepicker color
+      },
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+      require("daisyui"),
+      require('@tailwindcss/forms'),
+  ],
   daisyui: {
     themes: [
       {

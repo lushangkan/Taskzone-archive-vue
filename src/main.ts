@@ -6,7 +6,6 @@ import './styles/main.less'
 // Import Vue and other plugins
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
 import { initDb } from '@/database/init-db';
 
 
