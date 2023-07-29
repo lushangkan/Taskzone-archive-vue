@@ -58,11 +58,11 @@
 }
 
 .mask {
-  @apply absolute;
+  @apply flex;
   @apply bg-neutral;
   @apply top-0;
-  @apply w-screen;
-  @apply h-screen;
+  @apply w-full;
+  @apply h-full;
   @apply z-40;
   opacity: 0.13;
 }
@@ -159,4 +159,26 @@
       }
     }
   }
+}
+
+.addtaskbtn {
+  animation: addtaskbtn-animation 0.2s ease-in-out forwards alternate infinite;
+}
+
+@keyframes addtaskbtn-animation {
+  0% {
+    box-shadow: 0 0 5px 5px rgba(114,232,196,0.15);
+  }
+  100% {
+    box-shadow: 0 0 8px 5px rgba(114,232,196,0.3);
+  }
+}
+
+.navbar-stuck {
+  width: 100%;
+  transform: translateY(-110%);
+}
+
+.navbar-transition {
+  transition: transform 0.15s ease;
 }

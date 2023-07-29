@@ -26,6 +26,8 @@
     "jeep-sqlite": "^2.3.7",
     "lucide-vue-next": "^0.244.0",
     "moment": "^2.29.4",
+    "overlayscrollbars": "^2.2.1",
+    "overlayscrollbars-vue": "^0.5.2",
     "pinia": "^2.1.3",
     "reflect-metadata": "^0.1.13",
     "tailwindcss-animatecss": "^3.0.4",
@@ -34,7 +36,9 @@
     "vue-feather-icons": "^5.1.0",
     "vue-i18n": "9",
     "vue-router": "^4.2.2",
+    "vue-sticky-element": "^1.6.0",
     "vue-tailwind-datepicker": "^1.4.5",
+    "vue-virtual-scroller": "^2.0.0-beta.8",
     "vue3-lottie": "^2.7.4"
   },
   "devDependencies": {
@@ -42,7 +46,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@tsconfig/node18": "^2.0.1",
     "@types/animejs": "^3.1.7",
-    "@types/node": "^18.16.17",
+    "@types/node": "18",
     "@types/vue-feather-icons": "^5.0.4",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",

@@ -6,8 +6,8 @@ export const langEn = {
             tipsLine2: 'Click + to create a new task',
         },
         daytask: {
-            name: 'Today',
-            name2: '{date}'
+            today: 'Today',
+            titleDate: '{date}'
         }
     }
 }

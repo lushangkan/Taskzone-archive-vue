@@ -9,8 +9,9 @@ const router = createRouter({
         {
             name: 'daytask',
             path: '/',
-            alias: '/:date',
-            component: DayTaskView
+            alias: '/daytask/:date',
+            component: DayTaskView,
+            props: (route) => ({ date: route.params.date })
         },
         {
             name: 'welcome',

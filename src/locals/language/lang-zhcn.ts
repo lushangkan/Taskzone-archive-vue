@@ -6,8 +6,8 @@ export const langZhCn = {
             tipsLine2: '点击＋新建任务',
         },
         daytask: {
-            name: '今日',
-            name2: '{date}'
+            today: '今天',
+            titleDate: '{date}'
         }
     }
 }

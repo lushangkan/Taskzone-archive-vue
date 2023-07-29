@@ -2,12 +2,13 @@ import 'reflect-metadata'
 
 // Import styles files
 import './styles/main.less'
+import 'overlayscrollbars/overlayscrollbars.css';
 
 // Import Vue and other plugins
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { initDb } from '@/database/init-db';
-
+import VStickyElement from 'vue-sticky-element';
 
 // Import App and router
 import App from '@/App.vue'
@@ -27,6 +28,7 @@ const pinia = createPinia()
 app.use(pinia)
 app.use(router)
 app.use(i18n)
+app.use(VStickyElement);
 
 // Use database stores
 const dbStores = useDatabaseStores();
