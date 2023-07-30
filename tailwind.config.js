@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         // DO NOT CHANGE
         "vtd-primary": colors.sky, // Light mode Datepicker color
-        "vtd-secondary": colors.gray, // Dark mode Datepicker color
+        "vtd-secondary": colors.sky, // Dark mode Datepicker color
       },
     },
   },
@@ -35,6 +35,35 @@ module.exports = {
           "error": "#FF6B54",
         }
       },
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
     ],
   },
 }

@@ -24,7 +24,7 @@
       </div>
       <Transition name="datepicker">
         <div ref="datepickerRef" v-if="datepickerOpen"
-             class="w-[310px] h-[359px] absolute top-[82px] bg-white rounded-b-[22px] shadow-[0_0_10px_0_rgba(0,0,0,0.08)] flex flex-col justify-center items-center">
+             class="w-[310px] h-[359px]  bg-base-100 rounded-b-[22px] shadow-[0_0_10px_0_rgba(0,0,0,0.08)] flex flex-col justify-center items-center">
           <VueTailwindDatepicker i18n="zh-cn" as-single no-input v-model="datepickerDate"
                                  class="datepicker"></VueTailwindDatepicker>
         </div>
